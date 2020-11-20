@@ -346,13 +346,6 @@ body {
     }
 }
 
-@media only screen and (max-width:400px){
-    i{
-        display: none!important;
-    }
-}
-
-
 @media (max-width: 600px) {
   #sidebar {
     margin-right: calc(100% + -300px);
