@@ -29,6 +29,14 @@ function register(){
 	window.open("register.html","_self");
 }
 
+function getData(){
+    window.open("data.html","_self")
+}
+
+function home(){
+    window.open("index.html","_self")
+}
+
 function toggleSignup(){
     document.getElementById("login-toggle").style.backgroundColor="#fff";
     document.getElementById("login-toggle").style.color="#222";

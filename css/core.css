@@ -209,6 +209,10 @@ body {
     margin-right: 10%; 
 }
 
+.btn-sm{
+  width:100px;
+}
+
 .form-modal .login , .form-modal .signup{
     background:#186aa4;
     color:#fff;
@@ -249,6 +253,8 @@ body {
     background:#186aa4;;
     color:#ffff;
 }
+
+
 
 .form-modal form{
     position: relative;
@@ -373,3 +379,13 @@ body {
  }
 }
 
+.table-striped > tbody > tr:nth-child(2n) > td, .table-striped > tbody > tr:nth-child(2n) > th {
+   background-color: #e8eff7;
+}
+.table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+  background-color: white;
+}
+th {
+  background-color: #186aa4;
+  color: white;
+}
