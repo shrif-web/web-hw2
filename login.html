@@ -1,0 +1,81 @@
+<!doctype html>
+<html dir="rtl" lang="fa">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>WebDev</title>
+
+    <!-- Icons ============================================= -->
+    <link rel="apple-touch-icon" href="./img/favicon/apple-touch-icon.png"/>
+    <link rel="icon" href="./img/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="./img/favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="./img/favicon/android-chrome-512x512.png">
+
+    <!-- CSS ============================================= -->
+    <link
+            rel="stylesheet"
+            href="https://cdn.rtlcss.com/bootstrap/v4.2.1/css/bootstrap.min.css"
+            integrity="sha384-vus3nQHTD+5mpDiZ4rkEPlnkcyTP+49BhJ4wJeJunw06ZAp+wzzeBPUXr42fi8If"
+            crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/core.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+    <!-- SCRIPT ============================================= -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <script
+            src="https://cdn.rtlcss.com/bootstrap/v4.2.1/js/bootstrap.min.js"
+            integrity="sha384-a9xOd0rz8w0J8zqj1qJic7GPFfyMfoiuDjC9rqXlVOcGO/dmRqzMn34gZYDTel8k"
+            crossorigin="anonymous"></script>
+    <script src="./js/core.js"></script>
+</head>
+
+<header>
+    <!-- TOP NAV ============================================= -->
+    <nav class="navbar navbar-expand-sm navbar-light bg-custom-nav fixed-top shadow" id="top-nav">
+        <a class="navbar-brand" href="#">
+            <img src="./img/logo.png" width="90" height="40" alt="">
+        </a>
+        <!-- Toggle button -->
+        <form class="form-inline my-2 my-lg-0" action="index.html">
+                <button type="submit" class="btn bg-toggle shadow-sm"
+                style="position: absolute; left: 10px; color:blue;">بازگشت به خانه <i class="fa fa-angle-double-left" style="color: blue;"></i></button>
+        </form>
+    </nav>
+</header>
+<body>
+
+    <div class="form-modal">
+    
+    <div class="form-toggle">
+        <button id="signup-toggle" onclick="toggleSignup()">ثبت نام</button>
+        <button id="login-toggle" onclick="toggleLogin()">ورود</button>
+    </div>
+
+    <div id="login-form">
+        <form>
+            <input type="text" placeholder="ایمیل"/>
+            <input type="password" placeholder="رمز عبور"/>
+            <button type="button" class="btn login">ورود</button>
+           <!-- <p><a href="javascript:void(0)">Forgot password</a> </p>
+          <p><a href="javascript:void(0)" onclick="toggleSignup()">Register Account</a> </p>-->
+          
+        </form>
+    </div>
+
+    <div id="signup-form">
+        <form>
+            <input type="email" placeholder="Enter your email"/>
+            <input type="text" placeholder="Choose username"/>
+            <input type="password" placeholder="Create password"/>
+            <button type="button" class="btn signup"><i class="fa fa-spinner fa-pulse"></i> create account
+          </button> 
+            
+        </form>
+    </div>
+
+</div>
+</body>
+</html>
