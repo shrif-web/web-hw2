@@ -44,11 +44,11 @@
         <!--------------------->
         <div class="collapse navbar-collapse" id="to-hide">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active active-link" style="margin-right: 200px;">
+                <li class="nav-item active active-link" style="margin-right: 200px;" id="navbar-home">
                     <a class="nav-link mr-2" href="#" style="width: 20%" onclick="home()">خانه <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link down-border mr-2" href="#" onclick="getData()">داده ها</a>
+                <li class="nav-item down-border" id="navbar-data">
+                    <a class="nav-link mr-2" href="#" onclick="getData()">داده ها</a>
                 </li>
             </ul>
             <div class="my-2 my-lg-0" action="register.html">
@@ -128,7 +128,7 @@
 <!-- End vertical navbar -->
 
 <!-- Page content holder -->
-<div class="page-content p-5" id="content">
+<div class="page-content p-5" id="home-content">
     <div class="row card-row">
         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3" style="padding: 2%;">
             <div class="card">
@@ -154,6 +154,53 @@
     </div>
 
 </div>
+
+<div class="page-content p-5" id="data-content" style="display: none;">
+    <div class="row">
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">رتبه</th>
+            <th scope="col">نام تیم</th>
+            <th scope="col">نام دانشگاه و کشور</th>
+            <th scope="col">امتیاز</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>۱۰۰</td>
+            <td>خرگوش کوهستان</td>
+            <td>شریف - ایران</td>
+            <td>۱۲۰۰</td>
+          </tr>
+          <tr>
+            <td>۲۰۰</td>
+            <td>قوی مردان</td>
+            <td>تهران - ایران</td>
+            <td>۲۴۰۰</td>
+          </tr>
+          <tr>
+            <td>۳۰۰</td>
+            <td>بازیگوشان</td>
+            <td>تهران - ایران</td>
+            <td>۵۶۰</td>
+          </tr>
+          <tr>
+            <td>۴۰۰</td>
+            <td>خردمندان</td>
+            <td>تهران - ایران</td>
+            <td>۱۲۴۵</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="row">
+        <div class="col">
+        <button class="btn btn-sm btn-outline-primary mr-2 float-right" >بعدی</button>
+        <button class="float-left btn btn-sm btn-outline-primary mr-2 ">قبلی</button>
+    </div>
+    </div>
+    </div>
 <!-- End content -->
 </body>
 </html>

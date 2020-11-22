@@ -16,6 +16,7 @@ $(function ()
 
             	$('#sidebar').toggleClass('active');
             }
+
         }
     });
 });
@@ -30,11 +31,26 @@ function register(){
 }
 
 function getData(){
-    window.open("data.html","_self")
+    document.getElementById("home-content").style.display = "none";
+    document.getElementById("data-content").style.display = "block";
+    document.getElementById("navbar-home").classList.remove("active-link");
+    document.getElementById("navbar-home").classList.remove("active");
+    document.getElementById("navbar-data").classList.add("active");
+    document.getElementById("navbar-data").classList.add("active-link");
+    document.getElementById("navbar-data").classList.remove("down-border");
+    document.getElementById("navbar-home").classList.add("down-border");
+
 }
 
 function home(){
-    window.open("index.html","_self")
+    document.getElementById("home-content").style.display = "block";
+    document.getElementById("data-content").style.display = "none";
+    document.getElementById("navbar-home").classList.add("active-link");
+    document.getElementById("navbar-home").classList.add("active");
+    document.getElementById("navbar-data").classList.remove("active");
+    document.getElementById("navbar-data").classList.remove("active-link");
+    document.getElementById("navbar-data").classList.add("down-border");
+    document.getElementById("navbar-home").classList.remove("down-border");
 }
 
 function toggleSignup(){
