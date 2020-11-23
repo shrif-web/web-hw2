@@ -31,26 +31,39 @@ function register(){
 }
 
 function getData(){
-    document.getElementById("home-content").style.display = "none";
-    document.getElementById("data-content").style.display = "block";
+    document.getElementById("content").style.display = "none";
+    document.getElementById("data-table").style.display = "block";
     document.getElementById("navbar-home").classList.remove("active-link");
     document.getElementById("navbar-home").classList.remove("active");
     document.getElementById("navbar-data").classList.add("active");
     document.getElementById("navbar-data").classList.add("active-link");
     document.getElementById("navbar-data").classList.remove("down-border");
     document.getElementById("navbar-home").classList.add("down-border");
+    document.getElementById("data-cards").classList.remove("to-hide");
+    document.getElementById("data-cards").classList.add("to-show");
+    document.getElementById("data-bottom-nav").classList.add("active");
+    document.getElementById("data-bottom-nav").classList.remove("top-border");
+    document.getElementById("home-bottom-nav").classList.remove("active");
+    document.getElementById("home-bottom-nav").classList.add("top-border");
 
 }
 
 function home(){
-    document.getElementById("home-content").style.display = "block";
-    document.getElementById("data-content").style.display = "none";
+    document.getElementById("content").style.display = "block";
+    document.getElementById("data-table").style.display = "none";
     document.getElementById("navbar-home").classList.add("active-link");
     document.getElementById("navbar-home").classList.add("active");
     document.getElementById("navbar-data").classList.remove("active");
     document.getElementById("navbar-data").classList.remove("active-link");
     document.getElementById("navbar-data").classList.add("down-border");
     document.getElementById("navbar-home").classList.remove("down-border");
+    document.getElementById("data-cards").classList.add("to-hide");
+    document.getElementById("data-cards").classList.remove("to-show");
+    document.getElementById("home-bottom-nav").classList.add("active");
+    document.getElementById("home-bottom-nav").classList.remove("top-border");
+    document.getElementById("data-bottom-nav").classList.remove("active");
+    document.getElementById("data-bottom-nav").classList.add("top-border");
+
 }
 
 function toggleSignup(){

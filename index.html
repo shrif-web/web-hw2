@@ -63,8 +63,8 @@
 <body>
 <!-- BOTTOM NAV ============================================= -->
 <div class="shadow-lg bottom-navbar" id="bottom-navigation" style="display: none;">
-    <a class="active" href="#">خانه</a>
-    <a class="top-border" href="#">داده ها</a>
+    <a class="active" href="#" onclick="home()" id="home-bottom-nav">خانه</a>
+    <a class="top-border" href="#" onclick="getData()" id="data-bottom-nav">داده ها</a>
     <a class="top-border" href="#">ورود</a>
     <a class="top-border" href="#">ثبت نام</a>
 </div>
@@ -128,7 +128,7 @@
 <!-- End vertical navbar -->
 
 <!-- Page content holder -->
-<div class="page-content p-5" id="home-content">
+<div class="page-content p-5" id="content">
     <div class="row card-row">
         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3" style="padding: 2%;">
             <div class="card">
@@ -155,40 +155,40 @@
 
 </div>
 
-<div class="page-content p-5" id="data-content" style="display: none;">
+<div class="page-content p-5" id="data-table" style="display: none;">
     <div class="row">
     <table class="table table-striped">
         <thead>
           <tr>
-            <th scope="col">رتبه</th>
-            <th scope="col">نام تیم</th>
-            <th scope="col">نام دانشگاه و کشور</th>
-            <th scope="col">امتیاز</th>
+            <th scope="col" style="width: 23%; text-align: center;">رتبه</th>
+            <th scope="col" style="width: 27%; text-align: center;">نام تیم</th>
+            <th scope="col" style="width: 27%; text-align: center;">نام دانشگاه و کشور</th>
+            <th scope="col" style="width: 23%; text-align: center;">امتیاز</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
+        <tbody style="text-align: center;">
+          <tr >
             <td>۱۰۰</td>
-            <td>خرگوش کوهستان</td>
-            <td>شریف - ایران</td>
+            <td>نام تیم</td>
+            <td>نام دانشگاه و کشور</td>
             <td>۱۲۰۰</td>
           </tr>
           <tr>
             <td>۲۰۰</td>
-            <td>قوی مردان</td>
-            <td>تهران - ایران</td>
+            <td>نام تیم</td>
+            <td>نام دانشگاه و کشور</td>
             <td>۲۴۰۰</td>
           </tr>
           <tr>
             <td>۳۰۰</td>
-            <td>بازیگوشان</td>
-            <td>تهران - ایران</td>
+            <td>نام تیم</td>
+            <td>نام دانشگاه و کشور</td>
             <td>۵۶۰</td>
           </tr>
           <tr>
             <td>۴۰۰</td>
-            <td>خردمندان</td>
-            <td>تهران - ایران</td>
+            <td>نام تیم</td>
+            <td>نام دانشگاه و کشور</td>
             <td>۱۲۴۵</td>
           </tr>
         </tbody>
@@ -200,7 +200,105 @@
         <button class="float-left btn btn-sm btn-outline-primary mr-2 ">قبلی</button>
     </div>
     </div>
+   
     </div>
+    <div class="container" id="data-cards" style="display: none;">
+        <div class="card-deck">
+            <div class="card" style="background-color: #e8eff7">
+                <div class="container">
+                    <div class="row top-buffer">
+                    <div class="col text-dark-blue">رتبه</div>
+                    <div class="col text-light-blue" style="text-align: left;">۲۰</div>
+                </div>
+                <div class="row top-buffer">
+                    <div class="col text-dark-blue-important">نام تیم</div>
+                    <div class="col text-light-blue-important" style="text-align: left;">نام تیم</div>
+                </div>
+                <div class="row top-buffer">
+                    <div class="col text-dark-blue">نام دانشگاه و کشور</div>
+                    <div class="col text-light-blue" style="text-align: left;">نام دانشگاه و کشور</div>
+                </div>
+                <div class="row top-buffer down-buffer">
+                    <div class="col text-dark-blue-important">امتیاز</div>
+                    <div class="col text-light-blue-important" style="text-align: left;">۱۲۳۳</div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-deck">
+            <div class="card" style="background-color: #e8eff7">
+                <div class="container">
+                    <div class="row top-buffer">
+                    <div class="col text-dark-blue">رتبه</div>
+                    <div class="col text-light-blue" style="text-align: left;">۲۰</div>
+                </div>
+                <div class="row top-buffer">
+                    <div class="col text-dark-blue-important">نام تیم</div>
+                    <div class="col text-light-blue-important" style="text-align: left;">نام تیم</div>
+                </div>
+                <div class="row top-buffer">
+                    <div class="col text-dark-blue">نام دانشگاه و کشور</div>
+                    <div class="col text-light-blue" style="text-align: left;">نام دانشگاه و کشور</div>
+                </div>
+                <div class="row top-buffer down-buffer">
+                    <div class="col text-dark-blue-important">امتیاز</div>
+                    <div class="col text-light-blue-important" style="text-align: left;">۱۲۳۳</div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-deck">
+            <div class="card" style="background-color: #e8eff7">
+                <div class="container">
+                    <div class="row top-buffer">
+                    <div class="col text-dark-blue">رتبه</div>
+                    <div class="col text-light-blue" style="text-align: left;">۲۰</div>
+                </div>
+                <div class="row top-buffer">
+                    <div class="col text-dark-blue-important">نام تیم</div>
+                    <div class="col text-light-blue-important" style="text-align: left;">نام تیم</div>
+                </div>
+                <div class="row top-buffer">
+                    <div class="col text-dark-blue">نام دانشگاه و کشور</div>
+                    <div class="col text-light-blue" style="text-align: left;">نام دانشگاه و کشور</div>
+                </div>
+                <div class="row top-buffer down-buffer">
+                    <div class="col text-dark-blue-important">امتیاز</div>
+                    <div class="col text-light-blue-important" style="text-align: left;">۱۲۳۳</div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-deck">
+            <div class="card" style="background-color: #e8eff7">
+                <div class="container">
+                    <div class="row top-buffer">
+                    <div class="col text-dark-blue">رتبه</div>
+                    <div class="col text-light-blue" style="text-align: left;">۲۰</div>
+                </div>
+                <div class="row top-buffer">
+                    <div class="col text-dark-blue-important">نام تیم</div>
+                    <div class="col text-light-blue-important" style="text-align: left;">نام تیم</div>
+                </div>
+                <div class="row top-buffer">
+                    <div class="col text-dark-blue">نام دانشگاه و کشور</div>
+                    <div class="col text-light-blue" style="text-align: left;">نام دانشگاه و کشور</div>
+                </div>
+                <div class="row top-buffer down-buffer">
+                    <div class="col text-dark-blue-important">امتیاز</div>
+                    <div class="col text-light-blue-important" style="text-align: left;">۱۲۳۳</div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" style="margin-bottom: 100px;">
+            <button class="btn btn-sm btn-outline-primary mr-2 float-right" >بعدی</button>
+            <button class="float-left btn btn-sm btn-outline-primary mr-2 ">قبلی</button>
+        </div>
+        </div>
+    </div>
+    
 <!-- End content -->
 </body>
 </html>

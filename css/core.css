@@ -377,15 +377,43 @@ body {
  #bottom-navigation{
   display: block !important;
  }
-}
+ #data-cards.to-show{
+   display: block !important;
+   margin-top: 100px;
+   width: 90%;
+ }
+ #data-table{
+  display: none !important;
 
+}
+#data-cards.to-hide{
+  display: none !important;
+}
+}
+.top-buffer { margin-top:20px; }
+.down-buffer { margin-bottom:20px; }
 .table-striped > tbody > tr:nth-child(2n) > td, .table-striped > tbody > tr:nth-child(2n) > th {
    background-color: #e8eff7;
 }
 .table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
   background-color: white;
 }
+.text-dark-blue{
+  color: #0073c6af;
+}
+.text-light-blue{
+  color: #2578b488;
+}
+.text-dark-blue-important{
+  color: #0072c6;
+  font-size: large;
+}
+.text-light-blue-important{
+  color: #2578b4c5;
+  font-size: large;
+}
 th {
   background-color: #186aa4;
   color: white;
+  text-align: center;
 }
