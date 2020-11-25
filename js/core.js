@@ -24,11 +24,13 @@ $(function ()
 
 function login(){
 	window.open("login.html","_self");
+    toggleSignup();
 }
 
 function register(){
 	window.open("register.html","_self");
 }
+
 
 function getData(){
     document.getElementById("content").style.display = "none";
@@ -84,3 +86,54 @@ function toggleLogin(){
     document.getElementById("login-form").style.display="block";
 }
 
+function loginSubmit(){
+    var x = document.getElementById('email1').value;
+    var y = document.getElementById('password1').value;
+  if (x == "") {
+    $('#login-alert').append('<div class="alert">'+
+  '<span class="closebtn" onclick="this.parentElement.style.display=\'none\';">&times;</span>'+
+  'ایمیل خود را وارد کنید'+
+'</div>');
+  }
+  if ( y== "") {
+    $('#login-alert').append('<div class="alert">'+
+  '<span class="closebtn" onclick="this.parentElement.style.display=\'none\';">&times;</span>'+
+  'رمز خود را وارد کنید'+
+'</div>');
+  }
+
+    
+}
+
+function signupSubmit(){
+    var x = document.getElementById('email2').value;
+    var y = document.getElementById('password2').value;
+    var z = document.getElementById('password3').value;
+  if (x == "") {
+    $('#signup-alert').append('<div class="alert">'+
+  '<span class="closebtn" onclick="this.parentElement.style.display=\'none\';">&times;</span>'+
+  'ایمیل خود را وارد کنید'+
+'</div>');
+  }
+  if ( y == "") {
+    $('#signup-alert').append('<div class="alert">'+
+  '<span class="closebtn" onclick="this.parentElement.style.display=\'none\';">&times;</span>'+
+  'رمز عبور را وارد کنید'+
+'</div>');
+  }
+  if ( z == "") {
+    $('#signup-alert').append('<div class="alert">'+
+  '<span class="closebtn" onclick="this.parentElement.style.display=\'none\';">&times;</span>'+
+  'رمز عبور را تکرار کنید'+
+'</div>');
+  }
+
+}
+
+function validateForm() {
+  var x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+}

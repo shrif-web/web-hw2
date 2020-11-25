@@ -45,36 +45,51 @@
         </form>
     </nav>
 </header>
-<body onload="toggleSignup();">
+<body onload="toggleSignup()">
+<div class="form-modal" style="background-image: url(./img/menu-bg.jpeg);background-size: cover;background-size: 500px 500px;">
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" style="background-color: white; ">
+        <div class="form-toggle">
+            <button id="signup-toggle" onclick="toggleSignup()">ثبت نام</button>
+            <button id="login-toggle" onclick="toggleLogin()">ورود</button>
+        </div>
 
-    <div class="form-modal">
-    
-    <div class="form-toggle">
-        <button id="login-toggle" onclick="toggleLogin()">ورود</button>
-        <button id="signup-toggle" onclick="toggleSignup()">ثبت نام</button>
-    </div>
+        <div id="signup-form">
+            <form>
+                <input id='email2' type="email" placeholder="ایمیل"/>
+                <input id='password2' type="text" placeholder="رمز عبور"/>
+                <input id='password3' type="password" placeholder="تکرار رمز عبور"/>
+                <button type="button" class="btn signup" onclick="signupSubmit()"><i class="fa fa-spinner fa-pulse"></i> ثبت نام
+                </button>
 
-    <div id="signup-form">
-        <form>
-            <input type="email" placeholder="ایمیل"/>
-            <input type="text" placeholder="رمز عبور"/>
-            <input type="password" placeholder="تکرار رمز عبور"/>
-            <button type="button" class="btn signup"><i class="fa fa-spinner fa-pulse"></i> ثبت نام
-          </button> 
-            
-        </form>
+            </form>
+            <div id="signup-alert"></div>
+        </div>
+
+         <div id="login-form">
+            <form>
+                <input id='email1' type="text" placeholder="ایمیل"/>
+                <input id='password1' type="password" placeholder="رمز عبور"/>
+                <button type="button" class="btn login" onclick="loginSubmit()">ورود</button>
+                <!-- <p><a href="javascript:void(0)">Forgot password</a> </p>
+               <p><a href="javascript:void(0)" onclick="toggleSignup()">Register Account</a> </p>-->
+
+            </form>
+            <div id="login-alert"></div>
+        </div>
+        
     </div>
-    <div id="login-form">
-        <form>
-            <input type="text" placeholder="ایمیل"/>
-            <input type="password" placeholder="رمز عبور"/>
-            <button type="button" class="btn login">ورود</button>
-           <!-- <p><a href="javascript:void(0)">Forgot password</a> </p>
-          <p><a href="javascript:void(0)" onclick="toggleSignup()">Register Account</a> </p>-->
-          
-        </form>
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" id="to-hide2">
+        <div style="padding-right: 35%; padding-top: 50%;">
+            <h3>بشتابید! :) </h3>
+        </div>
     </div>
+</div>
 
 </div>
+
+
+
+
 </body>
 </html>
