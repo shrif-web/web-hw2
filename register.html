@@ -30,6 +30,11 @@
             integrity="sha384-a9xOd0rz8w0J8zqj1qJic7GPFfyMfoiuDjC9rqXlVOcGO/dmRqzMn34gZYDTel8k"
             crossorigin="anonymous"></script>
     <script src="./js/core.js"></script>
+    <script>
+        window.addEventListener("beforeunload", function () {
+  document.body.classList.add("animate-out");
+});
+    </script>
 </head>
 
 <header>
@@ -45,7 +50,7 @@
         </form>
     </nav>
 </header>
-<body onload="toggleSignup()">
+<body onload="toggleSignup()" class="animate-in">
 <div class="form-modal" style="background-image: url(./img/menu-bg.jpeg);background-size: cover;background-size: 500px 500px;">
 <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" style="background-color: white; ">

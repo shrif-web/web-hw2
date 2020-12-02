@@ -137,3 +137,21 @@ function validateForm() {
     return false;
   }
 }
+
+
+
+/*transition and night mode*/
+function myFunction() {
+  var element = document.getElementById("header");
+  var element2 = document.getElementById("body");
+  var element3 = document.getElementById("login_body")
+   element2.classList.add("dark_body");
+  element.classList.add("dark");
+  element3.classList.add("dark_login");
+}
+
+
+window.addEventListener("beforeunload", function () {
+document.body.classList.add("animate-out");
+});
+

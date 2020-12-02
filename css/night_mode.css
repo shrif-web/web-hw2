@@ -1,0 +1,68 @@
+
+
+
+
+
+
+   .dark .navbar{
+        background-color: #17223b;
+   }
+   .dark .nav-link.mr-2{
+       color: #ffe3d8;
+   }
+
+   .dark .btn.btn-sm.btn-outline-primary.my-2.mr-2{
+       border-color:aliceblue;
+       color: #ffe3d8;
+   }
+
+   .dark .btn.btn-sm.btn-primary.my-2.mr-2{
+       background-color: #ffe3d8;
+       color: black;
+       border-color: #ffe3d8;
+   }
+   
+
+   .dark_body .vertical-nav.active{
+
+background-color:#263859!important;
+   }
+
+   .dark_body .custom-control-input{
+       background-color: #ffe3d8;
+   }
+
+   .dark_body{
+       background-color:#6b778d;
+   }
+
+   .dark_body .card{
+       border-color:#ffe3d8;
+   }
+
+   .dark_body .btn.btn-sm.btn-outline-primary.my-2.mr-2:hover{
+       background-color: #ffe3d8;
+       color: #17223b;
+   }
+.dark_body .btn.btn-sm.btn-outline-primary.mr-2.float-right{
+   border-color: #ffe3d8;
+   color: #ffe3d8;
+}
+.dark_body .btn.btn-sm.btn-outline-primary.mr-2.float-right:hover{
+    background-color: #ffe3d8;
+    color: #263859;
+ }
+.dark_body .float-left.btn.btn-sm.btn-outline-primary.mr-2{
+    border-color: #ffe3d8;
+   color: #ffe3d8;
+} 
+
+.dark_body .float-left.btn.btn-sm.btn-outline-primary.mr-2:hover{
+    background-color: #ffe3d8;
+    color: #263859;
+ }
+
+
+ .dark_login {
+     background-color: #17223b;
+ }
