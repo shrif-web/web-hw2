@@ -51,6 +51,7 @@ function getData(){
 }
 
 function home(){
+  
     document.getElementById("content").style.display = "block";
     document.getElementById("data-table").style.display = "none";
     document.getElementById("navbar-home").classList.add("active-link");
@@ -142,12 +143,15 @@ function validateForm() {
 
 /*transition and night mode*/
 function myFunction() {
+  localStorage.setItem("checkbox1", document.getElementById("customSwitches").checked);	
+
   var element = document.getElementById("header");
   var element2 = document.getElementById("body");
   var element3 = document.getElementById("login_body")
    element2.classList.add("dark_body");
   element.classList.add("dark");
   element3.classList.add("dark_login");
+  
 }
 
 
@@ -155,3 +159,13 @@ window.addEventListener("beforeunload", function () {
 document.body.classList.add("animate-out");
 });
 
+window.onload = function() {
+  var checked = JSON.parse(localStorage.getItem("checkbox1"));
+    document.getElementById("customSwitches").checked = checked;
+
+  if (checked)
+  {
+    myFunction();
+  }
+  
+}

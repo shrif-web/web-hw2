@@ -448,8 +448,8 @@ th {
 
 /* transition */
 .animate-in {
-  -webkit-animation: fadeIn .5s ease-in;
-  animation: fadeIn .5s ease-in;
+  -webkit-animation: fadeIn .9s ease-in;
+  animation: fadeIn .9s ease-in;
 }
 
 .animate-out {

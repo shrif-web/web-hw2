@@ -21,6 +21,8 @@
             integrity="sha384-vus3nQHTD+5mpDiZ4rkEPlnkcyTP+49BhJ4wJeJunw06ZAp+wzzeBPUXr42fi8If"
             crossorigin="anonymous">
     <link rel="stylesheet" href="./css/core.css">
+    <link rel="stylesheet" href="./css/night_mode.css">
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
 
     <!-- SCRIPT ============================================= -->
@@ -30,9 +32,58 @@
             integrity="sha384-a9xOd0rz8w0J8zqj1qJic7GPFfyMfoiuDjC9rqXlVOcGO/dmRqzMn34gZYDTel8k"
             crossorigin="anonymous"></script>
     <script src="./js/core.js"></script>
+
+    <script>
+
+function nightmode() {
+
+  var element3 = document.getElementById("login_body");
+  var element4 = document.getElementById("login_header");
+
+  element3.classList.add("dark_login");
+  element4.classList.add("dark_login_header");
+document.getElementById("signup-toggle").onclick= function(){
+    document.getElementById("login-toggle").style.backgroundColor="#fff";
+  document.getElementById("login-toggle").style.color="#222";
+  document.getElementById("signup-toggle").style.backgroundColor="#00adb5";
+  document.getElementById("signup-toggle").style.color="#fff";
+  document.getElementById("login-form").style.display="none";
+  document.getElementById("signup-form").style.display="block";
+}
+document.getElementById("login-toggle").onclick= function(){
+    document.getElementById("login-toggle").style.backgroundColor="#00adb5";
+  document.getElementById("login-toggle").style.color="#fff";
+  document.getElementById("signup-toggle").style.backgroundColor="#fff";
+  document.getElementById("signup-toggle").style.color="#222";
+  document.getElementById("signup-form").style.display="none";
+  document.getElementById("login-form").style.display="block";
+};
+
+
+  
+}
+        window.addEventListener("beforeunload", function () {
+  document.body.classList.add("animate-out");
+});
+
+window.onload = function() {
+    
+  var checked = JSON.parse(localStorage.getItem("checkbox1"));
+    console.log(checked);
+
+  if (checked)
+  {
+    nightmode();
+  }
+    
+
+}
+
+
+    </script>
 </head>
 
-<header>
+<header id="login_header" >
     <!-- TOP NAV ============================================= -->
     <nav class="navbar navbar-expand-sm navbar-light bg-custom-nav fixed-top shadow" id="top-nav">
         <a class="navbar-brand" href="#">
@@ -46,17 +97,18 @@
         </form>
     </nav>
 </header>
-<body class="animate-in">
+<body id="login_body" class="animate-in">
 
 <div class="form-modal" style="background-image: url(./img/menu-bg.jpeg);background-size: 500px 500px;">
 <div class="row">
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" style="background-color: white;">
+    
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" style="background-color:white;">
         <div class="form-toggle">
-            <button id="signup-toggle" onclick="toggleSignup()">ثبت نام</button>
-            <button id="login-toggle" onclick="toggleLogin()">ورود</button>
+            <button  id="signup-toggle" onclick="toggleSignup()">ثبت نام</button>
+            <button  id="login-toggle" onclick="toggleLogin()">ورود</button>
         </div>
 
-        <div id="login-form">
+        <div class ="login_form" id="login-form">
             <form>
                 <input id='email1' type="text" placeholder="ایمیل"/>
                 <input id='password1' type="password" placeholder="رمز عبور"/>
@@ -69,7 +121,7 @@
         </div>
 
 
-        <div id="signup-form">
+        <div class="signup_form" id="signup-form">
             <form>
                 <input id='email2' type="email" placeholder="ایمیل"/>
                 <input id='password2' type="text" placeholder="رمز عبور"/>
@@ -82,6 +134,7 @@
         </div>
         
     </div>
+
     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" id="to-hide2">
         <div style="padding-right: 35%; padding-top: 50%;">
             <h3>بشتابید! :) </h3>

@@ -31,21 +31,46 @@
             integrity="sha384-a9xOd0rz8w0J8zqj1qJic7GPFfyMfoiuDjC9rqXlVOcGO/dmRqzMn34gZYDTel8k"
             crossorigin="anonymous"></script>
     <script src="./js/core.js"></script>
+    
+<script>
+
+/*transition and night mode*/
+function shiftmode() {
+console.log(document.getElementById("customSwitches").checked)
+var element = document.getElementById("header");
+  var element2 = document.getElementById("body");
+if (document.getElementById("customSwitches").checked){
+    
+
+   element2.classList.add("dark_body");
+  element.classList.add("dark");
+}
+else{
+
+element2.classList.remove("dark_body");
+element.classList.remove("dark");
+}
+localStorage.setItem("checkbox1", document.getElementById("customSwitches").checked);	
+
+}
 
 
-    <script>
-        function myFunction() {
-           var element = document.getElementById("header");
-           var element2 = document.getElementById("body");
-            element2.classList.add("dark_body");
-           element.classList.add("dark");
-        }
-
-
-        window.addEventListener("beforeunload", function () {
-  document.body.classList.add("animate-out");
+window.addEventListener("beforeunload", function () {
+document.body.classList.add("animate-out");
 });
-    </script>
+window.onload = function() {
+  var checked = JSON.parse(localStorage.getItem("checkbox1"));
+    document.getElementById("customSwitches").checked = checked;
+
+  if (checked)
+  {
+    shiftmode();
+  }
+    
+}
+
+</script>
+
 </head>
 
 <header id="header" >
@@ -76,8 +101,8 @@
         </div>
     </nav>
 </header >
-<body id="body"  class="animate-in">
-    <div class="animate-in">
+
+<body id="body" class="animate-in">
     <!-- BOTTOM NAV ============================================= -->
 <div class="shadow-lg bottom-navbar" id="bottom-navigation" style="display: none;">
     <a class="active" href="#" onclick="home()" id="home-bottom-nav">خانه</a>
@@ -128,7 +153,7 @@
 
         <ul class="nav flex-column mb-0">
             <li class="nav-item">
-                <a href="#" class="nav-link text-light" onchange="myFunction()">
+                <a href="#" class="nav-link text-light" onchange="shiftmode()">
                     حالت شب
                     <!-- Default switch -->
                     <div class="custom-control custom-switch"
@@ -145,7 +170,7 @@
 <!-- End vertical navbar -->
 
 <!-- Page content holder -->
-<div class="page-content p-5" id="content">
+<div class="page-content p-5 animate-in" id="content">
     <div class="row card-row">
         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3" style="padding: 2%;">
             <div class="card">
@@ -171,7 +196,7 @@
     </div>
 
 </div>
-</div>
+
 
 <div class="page-content p-5 animate-in" id="data-table" style="display: none;">
     <div class="row">

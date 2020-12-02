@@ -21,6 +21,8 @@
             integrity="sha384-vus3nQHTD+5mpDiZ4rkEPlnkcyTP+49BhJ4wJeJunw06ZAp+wzzeBPUXr42fi8If"
             crossorigin="anonymous">
     <link rel="stylesheet" href="./css/core.css">
+    <link rel="stylesheet" href="./css/night_mode.css">
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
 
     <!-- SCRIPT ============================================= -->
@@ -34,10 +36,57 @@
         window.addEventListener("beforeunload", function () {
   document.body.classList.add("animate-out");
 });
-    </script>
+ 
+    function nightmode_register() {
+      var element5 = document.getElementById("login_body");
+      var element6 = document.getElementById("login-header");
+    
+      element5.classList.add("dark_login");
+      element6.classList.add("dark_login_header");
+
+    document.getElementById("signup-toggle").onclick= function(){
+        document.getElementById("login-toggle").style.backgroundColor="#fff";
+      document.getElementById("login-toggle").style.color="#222";
+      document.getElementById("signup-toggle").style.backgroundColor="#00adb5";
+      document.getElementById("signup-toggle").style.color="#fff";
+      document.getElementById("login-form").style.display="none";
+      document.getElementById("signup-form").style.display="block";
+    }
+    document.getElementById("login-toggle").onclick= function(){
+        document.getElementById("login-toggle").style.backgroundColor="#00adb5";
+      document.getElementById("login-toggle").style.color="#fff";
+      document.getElementById("signup-toggle").style.backgroundColor="#fff";
+      document.getElementById("signup-toggle").style.color="#222";
+      document.getElementById("signup-form").style.display="none";
+      document.getElementById("login-form").style.display="block";
+    };
+  
+    }
+
+
+            window.addEventListener("beforeunload", function () {
+
+      document.body.classList.add("animate-out");
+    });
+    
+    window.onload = function() {
+      var checked = JSON.parse(localStorage.getItem("checkbox1"));
+        console.log(checked);
+        console.log("mon ami");
+
+
+      if (checked)
+      {
+        nightmode_register();
+      }
+        
+    }
+    
+    
+        </script>
 </head>
 
-<header>
+<header id="login-header">
     <!-- TOP NAV ============================================= -->
     <nav class="navbar navbar-expand-sm navbar-light bg-custom-nav fixed-top shadow" id="top-nav">
         <a class="navbar-brand" href="#">
@@ -50,7 +99,8 @@
         </form>
     </nav>
 </header>
-<body onload="toggleSignup()" class="animate-in">
+
+<body id="login_body" class="animate-in">
 <div class="form-modal" style="background-image: url(./img/menu-bg.jpeg);background-size: cover;background-size: 500px 500px;">
 <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" style="background-color: white; ">
@@ -59,7 +109,7 @@
             <button id="login-toggle" onclick="toggleLogin()">ورود</button>
         </div>
 
-        <div id="signup-form">
+        <div class="signup_form" id="signup-form">
             <form>
                 <input id='email2' type="email" placeholder="ایمیل"/>
                 <input id='password2' type="text" placeholder="رمز عبور"/>
@@ -71,7 +121,7 @@
             <div id="signup-alert"></div>
         </div>
 
-         <div id="login-form">
+         <div class ="login_form" id="login-form">
             <form>
                 <input id='email1' type="text" placeholder="ایمیل"/>
                 <input id='password1' type="password" placeholder="رمز عبور"/>
